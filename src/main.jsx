@@ -9,7 +9,7 @@ import { Heroespedia } from './Heroespedia';
 
 const router = createBrowserRouter([
   {
-    path: ".",
+    path: "*",
     element: <Heroespedia />,
   },
 ]);
