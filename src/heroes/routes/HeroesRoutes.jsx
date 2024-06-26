@@ -13,12 +13,13 @@ export const HeroesRoutes = () => {
       <>
          <Navbar routes={ routesHeroes } />
 
-         <Routes>
-          <Route path="marvel" element={ <MarvelPage/> } />
-          <Route path="dc" element={ <DCPage /> } />
-
-          <Route path="/*" element={ <Navigate to='marvel' /> } />
-        </Routes>
+         <div className="container">
+            <Routes>
+               <Route path="marvel" element={ <MarvelPage/> } />
+               <Route path="dc" element={ <DCPage /> } />
+               <Route path="/*" element={ <Navigate to='marvel' /> } />
+            </Routes>
+         </div>
       </>
    )
 }
