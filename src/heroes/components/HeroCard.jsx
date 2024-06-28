@@ -1,10 +1,9 @@
+import { Link } from "react-router-dom";
+
 export const HeroCard = ({
   id,
   superhero,
-  publisher,
   alter_ego,
-  first_appearance,
-  characters,
 }) => {
 
   const heroImageUrl = `/assets/heroes/${ id }.jpg`;
@@ -19,9 +18,17 @@ export const HeroCard = ({
           </div>
 
           <div className="col-10 d-flex flex-column justify-content-center align-items-center text-center p-3">
-            <h1 className="mb-3">{superhero}</h1>
-            <p className="text-wrap">{characters}</p>
+            <h1 className="mb-3">{ superhero }</h1>
+            <p className="text-wrap text-muted">{ alter_ego }</p>
+
+            <Link 
+              to={`/hero/${ id }`} 
+            >
+              info
+          </Link>
           </div>
+
+          
 
         </div>
       </div>
