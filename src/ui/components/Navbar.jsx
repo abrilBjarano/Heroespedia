@@ -15,7 +15,7 @@ export const Navbar = ({ routes = [] }) => {
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
             
-            <a className="navbar-brand text-success pe-5 ps-3"> Asociaciones </a>
+            <a className="navbar-brand pe-5 ps-3"> Heropedia </a>
 
             <div className="navbar-collapse">
                 <div className="navbar-nav">
