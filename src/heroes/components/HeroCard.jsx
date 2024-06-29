@@ -9,7 +9,7 @@ export const HeroCard = ({
   const heroImageUrl = `/assets/heroes/${ id }.jpg`;
 
   return (
-    <div className="col mb-2">
+    <div className="col mb-2 animate__animated animate__fadeInLeftBig animate__faster">
       <div className="card h-100">
         <div className="row no-gutters h-100">
 
