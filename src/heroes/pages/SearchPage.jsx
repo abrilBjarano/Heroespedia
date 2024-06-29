@@ -1,18 +1,27 @@
+import { useNavigate } from "react-router-dom";
+import { useForm } from "../../hooks/useForm";
 import { HeroCard } from "../components/HeroCard";
 
 export const SearchPage = () => {
+
+  // const navigate = useNavigate();
+  const { onInputChange, onSubmit, inputValue } = useForm();
+
+
   return (
     <>
-      <div className="row  mt-3">
+      <div className="row mt-3">
 
         <div className="col-5">
-          <form>
+          <form onSubmit={ onSubmit }>
             <input
               type="text"
               placeholder="Search a hero"
               className="form-control"
               name="searchText"
               autoComplete="off"
+              value={ inputValue }
+              onChange={ onInputChange }
             />
           </form>
 
