@@ -18,7 +18,7 @@ export const HeroCard = ({
           </div>
 
           <div className="col-10 d-flex flex-column justify-content-center align-items-center text-center p-3">
-            <h1 className="mb-3">{ superhero }</h1>
+            <h5 className="mb-3">{ superhero }</h5>
             <p className="text-wrap text-muted">{ alter_ego }</p>
 
             <Link 
