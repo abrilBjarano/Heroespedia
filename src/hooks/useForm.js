@@ -1,3 +1,4 @@
+import queryString from "query-string";
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -6,7 +7,7 @@ export const useForm = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    console.log({ location });
+    const { q = '' } = queryString.parse( location.search );
 
     const [ inputValue, setInputValue ] = useState('');
 
@@ -25,6 +26,7 @@ export const useForm = () => {
     return {
         onInputChange,
         onSubmit,
-        inputValue
+        inputValue,
+        q,
     }
 }

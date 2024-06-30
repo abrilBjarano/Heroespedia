@@ -1,10 +1,9 @@
-import { useNavigate } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
 import { HeroCard } from "../components/HeroCard";
 
 export const SearchPage = () => {
 
-  const { onInputChange, onSubmit, inputValue } = useForm();
+  const { onInputChange, onSubmit, inputValue, q } = useForm();
 
   
   return (
@@ -37,7 +36,7 @@ export const SearchPage = () => {
             Search a hero
           </div>
           <div className="alert alert-danger">
-            No hero with <b>ABC</b>
+            No hero with <b>{`${ q }`}</b>
           </div>
 
           {/* <HeroCard /> */}
