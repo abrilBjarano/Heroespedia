@@ -9,36 +9,38 @@ export const SearchPage = () => {
   return (
     <>
       <div className="row mt-3">
+        <form 
+          onSubmit={ onSubmit }
+          className="col-10">
+          <input
+            type="text"
+            placeholder="Search a hero"
+            className="form-control"
+            name="searchText"
+            autoComplete="off"
+            value={ inputValue }
+            onChange={ onInputChange }
+          />
+        </form>
 
-        <div className="col-3">
-          <form onSubmit={ onSubmit }>
-            <input
-              type="text"
-              placeholder="Search a hero"
-              className="form-control"
-              name="searchText"
-              autoComplete="off"
-              value={ inputValue }
-              onChange={ onInputChange }
-            />
-          </form>
-
-          <div className="btn btn-primary mt-2">
-            Search
-          </div>
+        <div className="col-2 btn btn-primary">
+          Search
         </div>
+      </div>
 
-        <div className="col-9">
-          <h4>Results</h4>
-          <hr/>
+      <div className="mt-5">
+        <h4>Results</h4>
+        <hr/>
 
-          <div className="alert alert-primary">
-            Search a hero
-          </div>
-          <div className="alert alert-danger">
-            No hero with <b>{`${ q }`}</b>
-          </div>
+        {
+          ( q === '' )
+          ? <div className="alert alert-primary">Search a hero</div>
+          : ( heroes.length === 0 )
+            && <div className="alert alert-danger">No hero with <b>{`${ q }`}</b> </div>
+        }
 
+
+        <div className="row rows-cols-1 row-cols-md-2 g-3 mb-4">
           { heroes.map( heroe => (
             <HeroCard
               key={ heroe.id }
@@ -48,6 +50,7 @@ export const SearchPage = () => {
         </div>
 
       </div>
+
     </>
   )
 }
