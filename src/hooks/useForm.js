@@ -31,5 +31,6 @@ export const useForm = () => {
         onSubmit,
         inputValue,
         q,
+        heroes,
     }
 }
