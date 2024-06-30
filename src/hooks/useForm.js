@@ -10,7 +10,6 @@ export const useForm = () => {
 
     const { q = '' } = queryString.parse( location.search );
     const heroes = getHeroesByName( q );
-    console.log(heroes);
 
     const [ inputValue, setInputValue ] = useState('');
 
