@@ -1,6 +1,7 @@
 import queryString from "query-string";
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { getHeroesByName } from "../heroes/helpers/getHeroesByName";
 
 export const useForm = () => {
 
@@ -8,6 +9,8 @@ export const useForm = () => {
     const location = useLocation();
 
     const { q = '' } = queryString.parse( location.search );
+    const heroes = getHeroesByName( q );
+    console.log(heroes);
 
     const [ inputValue, setInputValue ] = useState('');
 
