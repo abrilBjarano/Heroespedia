@@ -10,7 +10,7 @@ export const SearchPage = () => {
     <>
       <div className="row mt-3">
 
-        <div className="col-5">
+        <div className="col-3">
           <form onSubmit={ onSubmit }>
             <input
               type="text"
@@ -28,7 +28,7 @@ export const SearchPage = () => {
           </div>
         </div>
 
-        <div className="col-7">
+        <div className="col-9">
           <h4>Results</h4>
           <hr/>
 
