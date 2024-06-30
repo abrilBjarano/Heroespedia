@@ -3,7 +3,7 @@ import { HeroCard } from "../components/HeroCard";
 
 export const SearchPage = () => {
 
-  const { onInputChange, onSubmit, inputValue, q } = useForm();
+  const { onInputChange, onSubmit, inputValue, q, heroes } = useForm();
 
   
   return (
@@ -39,8 +39,12 @@ export const SearchPage = () => {
             No hero with <b>{`${ q }`}</b>
           </div>
 
-          {/* <HeroCard /> */}
-
+          { heroes.map( heroe => (
+            <HeroCard
+              key={ heroe.id }
+              { ...heroe }
+            />
+          ))}
         </div>
 
       </div>
