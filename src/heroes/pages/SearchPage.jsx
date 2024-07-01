@@ -40,7 +40,7 @@ export const SearchPage = () => {
         }
 
 
-        <div className="row row-cols-xs-1 row-cols-1 row-cols-md-2 g-3 mb-4">
+        <div className="row row-cols-xs-1 row-cols-1 row-cols-md-1 row-cols-lg-2 g-3 mb-4">
           { heroes.map( heroe => (
             <HeroCard
               key={ heroe.id }
