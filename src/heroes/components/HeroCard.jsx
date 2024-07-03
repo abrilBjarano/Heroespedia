@@ -10,7 +10,6 @@ export const HeroCard = ({
   const heroImageUrl = `/assets/heroes/${ id }.jpg`;
   const { pathname } = useLocation();
 
-  console.log(location);
 
   return (
     <div className="col mb-2 animate__animated animate__fadeInLeftBig animate__faster">
